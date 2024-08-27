@@ -33,7 +33,7 @@ pause
 @rem ƒ`ƒFƒbƒNpause
 @pause
 
-@echo [91m91mpush‚ğŠJn‚µ‚Ü‚·...[0m
+@echo [91mpush‚ğŠJn‚µ‚Ü‚·...[0m
 @rem GitHub‚Ìorigin BACKUP‚Épush‚·‚é
 @git push origin BACKUP
 @echo [93mƒoƒbƒNƒAƒbƒv‚ªŠ®—¹‚µ‚Ü‚µ‚½B
