@@ -1,4 +1,4 @@
-
+@echo off
 @echo [91m!Œx!‘€ì‚ÍŽæ‚èÁ‚¹‚Ü‚¹‚ñ!ŽÀs‚ÍTd‚É![0m
 @rem ¡‚¢‚é‚Æ‚±‚ë‚ÉƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠŽw’è
 @echo [93mƒfƒBƒŒƒNƒgƒŠ‚ÌŽw’è‚ðs‚¢‚Ü‚·...
@@ -11,7 +11,7 @@
 pause
 
 @rem ƒoƒbƒNƒAƒbƒvŽÀs
-@echo ƒoƒbƒNƒAƒbƒv‚ðŠJŽn‚µ‚Ü‚·...[0m
+@echo [93mƒoƒbƒNƒAƒbƒv‚ðŠJŽn‚µ‚Ü‚·...[0m
 
 @rem BACKUPƒuƒ‰ƒ“ƒ`‚Éƒ`ƒFƒbƒNƒAƒEƒg
 @git checkout BACKUP
