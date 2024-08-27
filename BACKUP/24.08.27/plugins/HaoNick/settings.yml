@@ -1,0 +1,86 @@
+# HaoNick configuration by Haoshoku
+# Support: https://haoshoku.xyz/go/discord
+
+settings:
+  # Can be edited in messages.yml.
+  join_message: true
+  quit_message: true
+  # Settings for keeping nick.
+  keep_nick:
+    active: true
+    # Permission to keep the nick data
+    permission: haonick.keep
+    # Data which should be kept.
+    data:
+      uuid: true
+      tag: true
+      skin: true
+      game_profile_name: false
+    # Want a random name on join?
+    random_name_on_join: false
+    # If you do not activate mysql connection, HaoNick will automatically keeps the nick of player within a file.
+    mysql:
+      active: false
+      host: localhost
+      port: 3306
+      database: database
+      username: root
+      password: password
+      table_name: nick
+  chat:
+    # Bukkit has its own handling for chats. If you let it true, HaoNick cancels the event and use a broadcastMessage for chat instead.
+    # It is good for plugins which is incompatible with the format of NickAPI.
+    # If you want to use the original format of bukkit, you can disable this option.
+    broadcast_message_instead_of_format: true
+    # Set this to true, if you are using another chat plugin that uses the displayname and want to take the prefix, name and suffix to the other plugin.
+    display_name: false
+  tab:
+    # FALSE: If people nick into a specific name, they need to write /fakerank for a fake prefix / suffix that can be edited in the fake_ranks.yml
+    # TRUE: If you set it to true, it will be like ranks.yml, it will be permission based. But the command /fakerank will be blocked instead.
+    fake_ranks_permission_based: false
+    # HaoNick has an integrated scoreboard update timer. Could help for possible fixes. Restart is required.
+    timer:
+      active: true
+      # Default: 60 Every minute all of the players scoreboard are gonna be refreshed. Decreasing this value may cause performance problems.
+      update_interval: 60
+    # If HaoNick has problems with scoreboard handling, you can increase the value.
+    # Perhaps after increasing this value, it may work with another scoreboard plugins
+    # In ticks!
+    # 1 second = 20 Ticks
+    scoreboard_creation_time: 10
+    # Should scoreboard packets be sent async?
+    async: true
+    # You can use the tab header and footer created by HaoNick. Of course you can disable it.
+    # Credits for 1.8.8 method belongs to Zay.
+    # Compatible with PlaceholderAPI.
+    # Supported: %online% for online players, %maxPlayers% for max players and %name% for players name.
+    header_and_footer:
+      active: false
+      header: '&aYour header can be edited within settings.yml of HaoNick folder'
+      footer: '&cYour footer can be edited within settings.yml of HaoNick folder'
+      # Header and footer will be updated every 10 minutes (default).
+      # You can decrease this value if you want to add compatibility with other plugins.
+      update_interval: 600
+  death_message:
+    active: false
+    text:
+      dead: Player %player% died
+      killed_by_player: Player %player% was killed by %killer%
+  action_bar:
+    active: false
+    permanent: true
+    text:
+      permanent: '&cName: &c%name%'
+      while_nicked: '&cYou are currently nicked as &e%name%'
+    update_interval: 20
+    worlds:
+    - world
+  blacklisted_worlds:
+  - yourWorldNameHere
+  # By setting it to true,
+  # HaoNicks placeholder %haonick_rank_prefix%, %haonick_rank_suffix% will access to the prefix, suffix of LuckPerms
+  luckperms_support: false
+  # Set this to false if you have problems with PlaceHolderAPI & HaoNick.
+  placeholder_support: true
+  # If enabled, HaoNick will throw an error if an error happens. Highly recommended enabling it.
+  error_log: true
