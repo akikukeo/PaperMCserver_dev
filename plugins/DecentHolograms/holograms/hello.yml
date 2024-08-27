@@ -1,0 +1,12 @@
+location: world:419.500:5.414:-662.500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: HELLO!
+    height: 0.3
+  actions: {}

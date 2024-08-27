@@ -1,0 +1,97 @@
+# NickAPI 6.5 by Haoshoku
+# Discord: https://haoshoku.xyz/go/discord
+
+nickapi:
+  # Player with operator permissions will be noticed if an update is available.
+  # You can freely disable it. It is up to you.
+  update_available: true
+
+  # If you set it to false, the player himself will not be able to see his own changed skin.
+  skin_changing: true
+
+  # NickAPI has different methods to respawn the player.
+  # If you have issues with your respawn method, set it to 1 and try again
+  # If you still have problems with it, join our discord server for further support.
+  respawn_method: 1
+
+  # For security reasons the NickAPI do not allow players to join the server while it is starting.
+  # You are able to modify the messages.
+  prevent_join_on_startup_message: 'The server is currently starting..'
+
+  # For security reasons, NickAPI has an integrated double account check mechanism while logging in into the server
+  # It means the player is going to be kicked if a username with the same uuid (serverside) is on the server to prevent issues while listening to packets.
+  # You can edit the message here
+  account_already_on_server_message: 'This account is already on the server'
+
+  # If you set it to false, the NickAPI will prevent name changes in GameProfile. (Serverside)
+  # NickAPI::setGameProfileName( player, name ) has no function after setting it to false.
+  # You should disable it on CRACKED servers because of authentication plugins like AuthMe etc.
+  game_profile_changes: true
+
+  # Tab-Complete value:
+  # -1 | Disables the whole tab-complete mechanism
+  #  0 | Nothing happens
+  #  1 | Activates tab-complete-system built by NickAPI {does not work for commands}
+  #  2 | Activates tab-complete-system built by NickAPI {does work for commands but may cause incompatibilities}
+  tab_complete: 1
+
+  # Packet injection
+  # By writing 1, NickAPI will inject its data AFTER packet_handler.
+  # 0 means it will do before.
+  # Some plugins cause error while injecting its listeners. That's the reason why this feature is here.
+  packet_injection: 0
+
+  # This entry adds support for interacting commands with nicked nicknames (PlayerCommandPreprocessEvent)
+  # Example: Player "Haoshoku" nicks to "nicktest"
+  # By default interacting with nicked names do not work, this means /tp nicktest may not work.
+  # By enabling nicked_names you add the support for that.
+  command_support:
+    nicked_names: false
+    # By default, even if a player has nicked, interacting with the original name do work.
+    # This entry removes the interact with commands for original names.
+    # {Not recommended to activate it}
+    remove_original_name: false
+    # If you enable 'remove_original_name', the interaction with original name is blocked.
+    original_player_replacement: 'Unavailable'
+
+  # If you set this to false, Minetools will be used for UUID/Skin data instead of Mojang API.
+  # The advantage is that you are able to bypass the request limit.
+  mojang_api: true
+
+  # NickAPI caches the data after requesting the data from the Mojang API.
+  # Since version 6.3.0 you are able to clear the cache (in MINUTES!).
+  # It's good when a player changes his skin, and you want to have it updated on your server by nicking into his name.
+  cache_reset_time:
+    uuid: 30
+    skin: 30
+
+  # Skin settings while changing the skin into a players skin that does not exist.
+  skin_settings:
+    # Highly recommended to set it to true
+    enabled: true
+    # If a player nicks into a name that does not exist, the player will receive the skin of one of these names randomly.
+    default_names:
+      - Haoshoku
+    # If you want to set your custom skin, you can freely do it. By activating it, default_names will not work anymore.
+    # Your custom skin that you have set will be used.
+    textures:
+      enabled: false
+      default_value: ''
+      default_signature: ''
+
+  # Cracked support settings
+  cracked:
+    # Enable this if you have a cracked server.
+    # If you are using BungeeCord, please download "NickAPIBungee.jar" from SpigotMC.org and put it into your BungeeCord folder.
+    # You may delete SkinsRestorer for a better experience.
+    enabled: false
+    # Set usernames here. It should belong to a minecraft account. Minecraft names that do not exist will receive the skin of this username.
+    # Furthermore, if you nick into a name that does not exist, the skin of these names will be randomly used, even for premium servers.
+    default_names:
+      - Steve
+      - Notch
+      # Instead of 'default_names' you can set a value and signature.
+    textures:
+      enabled: false
+      default_value: ''
+      default_signature: ''
