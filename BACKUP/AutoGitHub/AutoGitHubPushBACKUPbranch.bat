@@ -1,4 +1,3 @@
-@echo off
 @echo [91m!Œx!‘€ì‚Íæ‚èÁ‚¹‚Ü‚¹‚ñ!Às‚ÍTd‚É![0m
 @rem ¡‚¢‚é‚Æ‚±‚ë‚ÉƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠw’è
 @echo [93mƒfƒBƒŒƒNƒgƒŠ‚Ìw’è‚ğs‚¢‚Ü‚·...
@@ -6,7 +5,7 @@
 @rem cd‚Åeƒtƒ@ƒCƒ‹‚ÉˆÚ“®(2‰ñ)
 @rem PaperMCserver_dev‚ÖˆÚ“®‚·‚é
 @cd ..\..
-@echo «w’è‚µ‚Ü‚µ‚½BƒpƒX‚ÌŠm”F‚ğ‚µ‚Ä‚­‚¾‚³‚¢B«
+@echo «w’è‚µ‚Ü‚µ‚½BƒpƒX‚ÌŠm”F‚ğ‚µ‚Ä‚­‚¾‚³‚¢B«[92m
 @rem ƒ`ƒFƒbƒNpause
 pause
 
@@ -20,7 +19,7 @@ pause
 @rem GitHub‚Ìorigin main‚Æorigin BACKUP‚©‚çpull‚·‚é
 @git pull origin main
 @git pull origin BACKUP
-@echo [93mGitHub‚Ìmain‚ÆBACKUP‚©‚çpull‚µ‚Ü‚µ‚½B[0m
+@echo [93mGitHub‚Ìmain‚ÆBACKUP‚©‚çpull‚µ‚Ü‚µ‚½B[92m
 @rem ƒ`ƒFƒbƒNpause
 @pause
 
@@ -30,13 +29,13 @@ pause
 @git commit -m "Auto Backup Program to Git,GitHub"
 @echo [93m-m "Auto Backup Program to Git,GitHub"‚Åcommit‚µ‚Ü‚µ‚½B[0m
 @echo [91m‚±‚ê‚æ‚èpush‚ğs‚¢‚Ü‚·B
-@echo !Œx!push‚Íæ‚èÁ‚¹‚Ü‚¹‚ñ!Às‚ÍTd‚É!
+@echo !Œx!push‚Íæ‚èÁ‚¹‚Ü‚¹‚ñ!Às‚ÍTd‚É![92m
 @rem ƒ`ƒFƒbƒNpause
 @pause
 
-@echo 91mpush‚ğŠJn‚µ‚Ü‚·...[0m
+@echo [91m91mpush‚ğŠJn‚µ‚Ü‚·...[0m
 @rem GitHub‚Ìorigin BACKUP‚Épush‚·‚é
 @git push origin BACKUP
 @echo [93mƒoƒbƒNƒAƒbƒv‚ªŠ®—¹‚µ‚Ü‚µ‚½B
-@echo BACKUPƒuƒ‰ƒ“ƒ`‚Épush‚ªs‚í‚ê‚Ü‚µ‚½BGitHub‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[0m
+@echo BACKUPƒuƒ‰ƒ“ƒ`‚Épush‚ªs‚í‚ê‚Ü‚µ‚½BGitHub‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[92m
 @pause
