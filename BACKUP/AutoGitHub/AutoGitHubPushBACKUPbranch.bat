@@ -4,7 +4,7 @@
 @cd %~dp0
 @rem cd‚Åeƒtƒ@ƒCƒ‹‚ÉˆÚ“®(2‰ñ)
 @rem PaperMCserver_dev‚ÖˆÚ“®‚·‚é
-@cd ..\..
+@cd ..\
 @echo «w’è‚µ‚Ü‚µ‚½BƒpƒX‚ÌŠm”F‚ğ‚µ‚Ä‚­‚¾‚³‚¢B«[92m
 @rem ƒ`ƒFƒbƒNpause
 pause
@@ -38,4 +38,4 @@ pause
 @git push origin BACKUP
 @echo [93mƒoƒbƒNƒAƒbƒv‚ªŠ®—¹‚µ‚Ü‚µ‚½B
 @echo BACKUPƒuƒ‰ƒ“ƒ`‚Épush‚ªs‚í‚ê‚Ü‚µ‚½BGitHub‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B[92m
-@pause
+exit /b
